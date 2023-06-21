@@ -31,7 +31,22 @@ You can reproduce our experiments using **MATLAB R2021a**.
 
 ## Quick Start
 
-TBA
+1. Set the types of the metric, the channel model, and the urgency function.
+   - Change `metric_type`, `channel_type`, and `urgency_type` in `main.m`.
+
+2. Set the type of the system assumptions.
+
+   - Run experiments under the basic system assumption.
+     - Set `system_assumption = 'basic-configuration'`.
+
+   - Run experiments under the relaxed system assumptions.
+     - Set `system_assumption = 'unknown-lambda' `  to run experiments under unknown $\lambda$.
+     - Set `system_assumption = 'heterogeneous-lambdas' ` to run experiments under heterogeneous $\lambda_1, \lambda_2, \cdots, \lambda_N$.
+     - Set `system_assumption = 'unsynchronized-traffic' ` to run experiments under unsynchronized periodic traffic.
+     - Set `system_assumption = 'dynamic-number' `  to run experiments under varied $N$.
+
+3. Set the simulation parameters.
+   - Change `simu_switch`, `simu_indept`, and `simu_frames` in the separate `run` scripts.
 
 
 
