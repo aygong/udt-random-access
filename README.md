@@ -40,7 +40,7 @@ You can reproduce our experiments using **MATLAB R2021a**.
      - Set `system_assumption = 'unknown-lambda' `  for unknown $\lambda$.
      - Set `system_assumption = 'heterogeneous-lambdas' ` for heterogeneous $\lambda_1, \lambda_2, \cdots, \lambda_N$.
      - Set `system_assumption = 'unsynchronized-traffic' ` for unsynchronized periodic traffic.
-     - Set `system_assumption = 'dynamic-number'`  for varied $N$.
+     - Set `system_assumption = 'dynamic-number'`  for dynamic-varying $N$.
 2. Set the types of the metric, the channel model, and the urgency function.
    - Change `metric_type`, `channel_type`, and `urgency_type` in `main.m`.
 3. Set the simulation parameters.
@@ -88,7 +88,7 @@ You can reproduce our experiments using **MATLAB R2021a**.
 |   └── unsync_sta_sim.m
 |
 ├── dynamic-number/
-|   ├── run_dynamic_number.m     # Run experiments under the varied number of users
+|   ├── run_dynamic_number.m     # Run experiments under the dynamic-varying number of users
 |   └── dynamic_sta_sim.m
 |
 ├── main.m                       # Compare the UDT/PLR performance
