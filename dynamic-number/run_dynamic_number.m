@@ -34,12 +34,22 @@ alpha = 0:delta_a:1;
 num_alpha = length(alpha);
 
 [transF, rewardF, obserF] = function_computing();
-[qF, pi_furQ] = QF_computing(channel_type);
+[~, pi_furQ] = QF_computing(channel_type);
 
 for x = 1:X
     fprintf("\n|> %d / %d: Interval = [%d, %d]\n", x, X, N - halves(x), N + halves(x));
     
-    initial_belief = binopdf(state, N, lambda);
+    state = 0:(N+halves(x));
+    num_state = length(state);
+    
+    [transF, rewardF, obserF] = function_computing();
+    [qF, ~] = QF_computing(channel_type);
+    
+    % Compute the mixture distribution
+    initial_belief = zeros(1, num_state);
+    for R = N-halves(x):N+halves(x)
+        initial_belief(1:R+1) = initial_belief(1:R+1) + binopdf(0:R, R, lambda) / (2 * halves(x) + 1);
+    end
     
     real_simQ_sim(x) = basic_simQ_sim(halves(x));
     

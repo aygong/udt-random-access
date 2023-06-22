@@ -59,7 +59,7 @@ end
 % 'capture'  : SINR-based capture model
 channel_type = 'collision';
 % Set the packet success rate
-sigma = zeros(1, N+1);
+sigma = zeros(1, 1001);
 switch channel_type
     case 'collision'
         fprintf("|> Use the collision model.\n");
@@ -69,7 +69,7 @@ switch channel_type
         fprintf("|> Use the SINR-based capture model.\n");
         nu = 1;
         kappa = 20;
-        sigma(2:N+1) = exp(-1)^(nu / kappa) ./ (1 + nu).^(0:N-1);
+        sigma(2:end) = exp(-1)^(nu / kappa) ./ (1 + nu).^(0:999);
     otherwise
         error("Unexpected channel model.\n");
 end
