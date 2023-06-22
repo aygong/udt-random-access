@@ -24,7 +24,7 @@ alpha = 0:delta_a:1;
 num_alpha = length(alpha);
 
 [transF, rewardF, obserF] = function_computing();
-[qF, pi_furQ] = QF_computing(channel_type);
+[qF, pi_furQ] = QF_computing();
 
 initial_belief = binopdf(state, N, lambda);
 

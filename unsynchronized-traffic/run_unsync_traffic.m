@@ -33,7 +33,7 @@ alpha = 0:delta_a:1;
 num_alpha = length(alpha);
 
 [transF, rewardF, obserF] = function_computing();
-[qF, pi_furQ] = QF_computing(channel_type);
+[qF, pi_furQ] = QF_computing();
 
 for x = 1:X
     fprintf("\n|> %d / %d: Maximum time offsets = %d\n", x, X, offsets(x));

@@ -1,10 +1,11 @@
-function [qF, pi_furQ] = QF_computing(ch_type)
+function [qF, pi_furQ] = QF_computing()
 % Compute the Q-functions
 % Declare global variables
 % See main.m
 global D gamma
 global state num_state action num_action alpha num_alpha
 global transF rewardF
+global channel_type
 
 % Compute the myopic policy
 pi_myo = zeros(1, num_state);
@@ -16,8 +17,7 @@ end
 U_myo = zeros(num_state, D+1);
 for t = D:-1:1
     for si = 1:num_state
-        U_myo(si, t) = gamma(t) * rewardF(si, pi_myo(si)) ...
-            + transF(si, :, pi_myo(si)) * U_myo(:, t+1);
+        U_myo(si, t) = gamma(t) * rewardF(si, pi_myo(si)) + transF(si, :, pi_myo(si)) * U_myo(:, t+1);
     end
 end
 
@@ -31,7 +31,7 @@ end
 
 % Compute the further simplified QMDP-based policy
 pi_furQ = {};
-if strcmp(ch_type, 'collision')
+if strcmp(channel_type, 'collision')
     for t = 1:D
         pi_furQ = [pi_furQ, zeros(t, num_alpha)];
         for si = num_state:-1:max(1, num_state-t+1)
