@@ -33,7 +33,7 @@ num_action = length(action);
 alpha = 0:delta_a:1;
 num_alpha = length(alpha);
 
-[transF, rewardF, obserF] = function_computing();
+[transF, rewardF, ~] = function_computing();
 [~, pi_furQ] = QF_computing(channel_type);
 
 for x = 1:X
