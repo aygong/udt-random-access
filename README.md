@@ -2,7 +2,7 @@
 
 Yijin Zhang, [Aoyu Gong](https://aygong.com/), Lei Deng, [Yuan-Hsun Lo](https://sites.google.com/view/yuanhsunlo/home), Yan Lin, [Jun Li](http://www.deepiiotlab.com/)
 
-`IEEE` | `Technical Report` | `BibTeX`
+[`IEEE`](https://ieeexplore.ieee.org/document/10218364) | `Technical Report` | [`BibTeX`](#Citation)
 
 <div align="center">
 <p>
@@ -104,5 +104,13 @@ You can reproduce our experiments using **MATLAB R2021a**.
 If you find the code helpful, please consider citing our paper:
 
 ```
-TBA
+@ARTICLE{zhang2023achieving,
+  title={Achieving maximum urgency-dependent throughput in random access},
+  author={Zhang, Yijin and Gong, Aoyu and Deng, Lei and Lo, Yuan-Hsun and Lin, Yan and Li, Jun},
+  journal={IEEE Trans. Commun.},
+  volume={},
+  number={},
+  pages={1-1},
+  year={2023},
+}
 ```
