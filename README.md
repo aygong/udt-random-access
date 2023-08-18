@@ -1,8 +1,8 @@
 # Achieving Maximum Urgency-Dependent Throughput in Random Access
 
-Yijin Zhang, [Aoyu Gong](https://aygong.com/), Lei Deng, [Yuan-Hsun Lo](https://sites.google.com/view/yuanhsunlo/home), Yan Lin, [Jun Li](http://www.deepiiotlab.com/)
+Yijin Zhang\*, [Aoyu Gong\*](https://aygong.com/), Lei Deng, [Yuan-Hsun Lo](https://sites.google.com/view/yuanhsunlo/home), Yan Lin, [Jun Li](http://www.deepiiotlab.com/)
 
-[`IEEE`](https://ieeexplore.ieee.org/document/10218364) | `Technical Report` | [`BibTeX`](#Citation)
+[`IEEE`](https://ieeexplore.ieee.org/document/10218364) | [`Technical Report`](https://aygong.com/docu/MultipleAccess.pdf) | [`BibTeX`](#Citation)
 
 <div align="center">
 <p>
